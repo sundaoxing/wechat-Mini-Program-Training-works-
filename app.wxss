@@ -1,0 +1,5 @@
+page{
+  font-family: "PingFangSC-Thin";
+  font-size: 32rpx;
+}
+/* 在全局wxss中，只有font、color（只有很少的属性会被属性继承）会被组件继承， */
