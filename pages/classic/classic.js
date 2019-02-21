@@ -34,10 +34,20 @@ Page({
     this.data.classicData.type)
   },
   onNext:function(event){
-    
+    this._updateClassic('next')
   },
-  onPrevious:function(event){
-
+  onPrevious: function (event) {
+    this._updateClassic('previous')
+  },
+  _updateClassic:function(nextOrPrevious){
+    let index = this.data.classicData.index;
+    classicModel.getClassic(index,nextOrPrevious, (res) => {
+      this.setData({
+        classicData: res,
+        latest: classicModel.isLatest(res.index),
+        first: classicModel.isFirst(res.index)
+      })
+    })
   },
 
   /**

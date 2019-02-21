@@ -23,13 +23,13 @@ Component({
    * 组件的方法列表
    */
   methods: {
-    onLeft:function(){
+    onLeft:function(event){
       if(!this.properties.latest){
         this.triggerEvent('left', {}, {})
       }
    
     },
-    onRight:function(){
+    onRight:function(event){
       if(!this.properties.first){
         this.triggerEvent('right', {}, {})
       }
